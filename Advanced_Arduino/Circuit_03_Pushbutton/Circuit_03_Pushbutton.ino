@@ -15,7 +15,8 @@ void loop() {
   currentState = digitalRead(buttonPin);
 
   // Check if the button was just pressed (transitioned from not pressed (HIGH) to pressed (LOW)).
-  if (lastState == HIGH && currentState == LOW) {   
+  if (lastState == HIGH && currentState == LOW) {
+    
     
     // Toggle the LED's state. If it was ON, turn it OFF and vice versa.
     ledState = !ledState;
