@@ -11,13 +11,6 @@
 
   The circuit:
    * LEDs from pins 2 through 11 to ground
-
- created 4 Sep 2010
- by Tom Igoe
-
- This example code is in the public domain.
-
- http://www.arduino.cc/en/Tutorial/BarGraph
  */
 
 

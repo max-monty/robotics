@@ -12,9 +12,9 @@ void setup()
 
 void loop() {
   /** Uncomment other functions as needed to try different LED displays **/
-  oneOnAtATime();
+  //oneOnAtATime();
   // oneAfterAnother();  
-  // pingPong();
+  pingPong();
   // marquee();
   // randomLED();
 }
