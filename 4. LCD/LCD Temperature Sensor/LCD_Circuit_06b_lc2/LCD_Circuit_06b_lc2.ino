@@ -8,7 +8,7 @@ const int inPin = 0;  // A0 is where you connect the sensor
 
 void setup()
 {
-  lcd.begin();       // Initialize the I2C LCD
+  lcd.init();       // Initialize the I2C LCD
   lcd.backlight();   // Turn on backlight
   Serial.begin(9600); // Initialize serial communication at 9600 baud rate
 }

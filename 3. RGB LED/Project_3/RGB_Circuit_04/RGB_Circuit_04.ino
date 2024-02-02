@@ -8,8 +8,8 @@ int bluePin = 9;
 
 // Variables for light level:
 int lightLevel;
-int maxThreshold = 0;     // Used for setting the "max" light level
-int minThreshold = 1023;  // Used for setting the "min" light level
+int maxThreshold = 1023;     // Used for setting the "max" light level
+int minThreshold = 0;  // Used for setting the "min" light level
 
 void setup() {
   pinMode(redPin, OUTPUT);
@@ -28,7 +28,7 @@ void RGB_color(int red_value, int green_value, int blue_value) {
 void loop() { 
   // Check for button press
   if (digitalRead(buttonPin) == LOW) {
-    calibrateSensor();  // Calibrate the sensor for 5 seconds
+    calibrateSensor();  // Calibrate the sensor for 10 seconds
   }
 
   lightLevel = analogRead(sensorPin);  // Reads the voltage on the sensorPin
@@ -50,6 +50,8 @@ void loop() {
 }
 
 void calibrateSensor() {
+  maxThreshold = 0;     // Used for setting the "max" light level
+  minThreshold = 1023;
   unsigned long startTime = millis();
   while (millis() - startTime < 10000) {  // For 10 seconds
     lightLevel = analogRead(sensorPin);

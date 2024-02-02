@@ -10,7 +10,7 @@ int tempC, tempF;
 
 void setup() {
   // Initialize the I2C LCD
-  lcd.begin();
+  lcd.init();
   lcd.backlight(); // Turn on the backlight
 }
 
